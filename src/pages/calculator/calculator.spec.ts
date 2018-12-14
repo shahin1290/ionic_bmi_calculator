@@ -34,4 +34,12 @@ describe("CalculatorPage", () => {
     expect(calculatorpage instanceof CalculatorPage).toEqual(true);
   });
 
+  it('should have calculateBMI function', () => {
+    spyOn(calculatorpage, 'calculateBMI'); 
+
+    calculatorpage.calculateBMI();
+
+    expect(calculatorpage.calculateBMI).toHaveBeenCalled(); 
+  });
+
 });
