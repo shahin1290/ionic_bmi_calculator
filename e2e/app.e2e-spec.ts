@@ -12,9 +12,9 @@ describe('App', () => {
       page.navigateTo('/');
     });
 
-    it('should have a title saying Ionic App', () => {
+    it('should have a title saying Ionic BMI Calculator', () => {
       page.getTitle().then(title => {
-        expect(title).toEqual('Ionic App');
+        expect(title).toEqual('Ionic BMI Calculator');
       });
     });
   })

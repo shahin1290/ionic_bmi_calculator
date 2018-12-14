@@ -10,7 +10,7 @@ export class Page {
     return browser.getTitle();
   }
 
- getPageOneTitleText() {
-    return element(by.tagName('page-one')).element(by.tagName('ion-title')).getText();
+ getTitleText() {
+    return element(by.tagName('ion-title')).getText();
   }
 }
