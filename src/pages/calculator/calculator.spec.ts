@@ -42,10 +42,19 @@ describe("CalculatorPage", () => {
     expect(calculatorpage.calculateBMI).toHaveBeenCalled(); 
   });
 
-  it('assess should return Normal', () => {
-      calculatorpage.weight = 65;
-      calculatorpage.height = 165;
-      calculatorpage.calculateBMI();
+  it('assess should return bmi value of 23.88 when weight is 65 and height is 165', () => {
+    calculatorpage.weight = 65;
+    calculatorpage.height = 165;
+    calculatorpage.calculateBMI();
+
+    expect(calculatorpage.bmiValue).toEqual(23.88);
+  });
+
+  it('assess should return Normal when weight is 65 and height is 165', () => {
+    calculatorpage.weight = 65;
+    calculatorpage.height = 165;
+    calculatorpage.calculateBMI();
+
     expect(calculatorpage.bmiMessage).toEqual('Normal');
   });
 
