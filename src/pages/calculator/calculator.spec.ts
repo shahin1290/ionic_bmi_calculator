@@ -50,6 +50,13 @@ describe("CalculatorPage", () => {
     expect(calculatorpage.bmiValue).toEqual(23.88);
   });
 
+  it('assess should return overweight if bmi value is greater than 25 and less than 30', () => {
+    calculatorpage.bmiValue = 25.5
+    calculatorpage.setBMIMessage();
+
+    expect(calculatorpage.bmiMessage).toEqual('Overweight');
+  });
+
   it('assess should return Normal when weight is 65 and height is 165', () => {
     calculatorpage.weight = 65;
     calculatorpage.height = 165;
