@@ -42,6 +42,14 @@ describe("CalculatorPage", () => {
     expect(calculatorpage.calculateBMI).toHaveBeenCalled(); 
   });
 
+  it('should have setBMIMessage function', () => {
+    spyOn(calculatorpage, 'setBMIMessage'); 
+
+    calculatorpage.setBMIMessage();
+
+    expect(calculatorpage.setBMIMessage).toHaveBeenCalled(); 
+  });
+
   it('assess should return bmi value of 23.88 when weight is 65 and height is 165', () => {
     calculatorpage.weight = 65;
     calculatorpage.height = 165;
